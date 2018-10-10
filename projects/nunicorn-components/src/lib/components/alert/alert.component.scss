@@ -1,0 +1,56 @@
+@import '../colors';
+
+.alert {
+  display: block;
+  margin: 0 auto;
+  padding: .85rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transform: scale(0);
+
+  .title {
+    font-weight: bold;
+  }
+
+  .close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding-right: 1.25rem;
+    color: inherit;
+    opacity: 1;
+    font-size: 18px;
+  }
+
+  &.primary {
+    background-color: $primary;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    color: $primary;
+  }
+
+  &.success {
+    background-color: $success;
+    color: white;
+  }
+
+  &.info {
+    background-color: $info;
+    color: white;
+  }
+
+  &.warning {
+    background-color: $warning;
+    color: white;
+  }
+
+  &.danger {
+    background-color: $danger;
+    color: white;
+  }
+
+}

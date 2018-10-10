@@ -1,0 +1,46 @@
+@import '../spacing';
+@import '../colors';
+
+.nu-modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(44, 48, 77, 0.34);
+  z-index: 1;
+}
+
+.nu-modal {
+  padding: 15px 30px;
+  margin-top: 30px;
+  display: block;
+  background-color: white;
+  display: block;
+  min-height: 300px;
+
+  .modal-header {
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0 30px 15px;
+
+    .modal-close {
+      position: absolute;
+      top: 5px;
+      right: 30px;
+      color: $border-grey;
+
+      &:hover {
+        cursor: pointer;
+        color: darken($border-grey, $border-darken);
+      }
+    }
+  }
+
+  .nu-modal-content {
+    padding-top: 60px;
+  }
+}

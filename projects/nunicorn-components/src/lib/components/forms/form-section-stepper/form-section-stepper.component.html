@@ -1,0 +1,31 @@
+<lib-loading-spinner *ngIf="!form"></lib-loading-spinner>
+<div *ngIf="form">
+  <div *ngFor="let section of getVisibleSections(form.sections); let i = index;">
+    <div class="form-section"
+         *ngIf="!section.section_hidden && form.activeSection === i">
+      <div class="form-title">
+        <span class="title">{{section.section_title}}</span>
+        <span class="section-indicator">
+          <lib-step-indicator [currentStep]="i + 1" [totalSteps]="getVisibleSections(form.sections).length"></lib-step-indicator>
+        </span>
+      </div>
+      <div class="form-body">
+        <div *ngFor="let elementConfig of form.formConfig[section.section_key].elements">
+          <sf2-form-element *ngIf="!elementConfig.formElement.hidden" [elementData]="elementConfig"></sf2-form-element>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="container-fluid">
+        <div class="form-actions row">
+          <div class="col-6 float-left no-pad-left">
+            <lib-solid-button [label]="'Back'" (click)="previousSection(i)" [clazz]="'secondary'" [disabled]="!canGoBack(i)"></lib-solid-button>
+          </div>
+          <div class="col-6 float-right no-pad-right">
+            <lib-solid-button [label]="'Save'" (click)="nextSection(i)" [clazz]="'primary'" [disabled]="!canGoForward(i)" ></lib-solid-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

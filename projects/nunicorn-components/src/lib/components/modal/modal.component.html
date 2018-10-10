@@ -1,0 +1,15 @@
+<div [@fadeInOut]="backdropVisible ? 'in' : 'out'" class="nu-modal-backdrop container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+      <div [@zoomInOut]="visible ? 'in' : 'out'" id="nu-modal" class="nu-modal">
+        <div class="modal-header">
+          <i class="fas fa-times modal-close" (click)="toggleModal()"></i>
+          {{title}}
+        </div>
+        <div class="nu-modal-content">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

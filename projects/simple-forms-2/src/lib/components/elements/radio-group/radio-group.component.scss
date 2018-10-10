@@ -1,0 +1,15 @@
+@import '../base.styles';
+
+.radio-wrap {
+
+  label {
+    display: inline-block;
+    position: relative;
+    float: left;
+  }
+
+  input {
+    float: right;
+  }
+
+}

@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Questrial', sans-serif;
+  background-color: #f2f3f8;
+}
+
+.page {
+  padding-top: 50px;
+}
+
+.form-out {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 10px;
+}
+
+
+.float-left {
+  float: left;
+  text-align: left;
+}
+
+.float-right {
+  float: right;
+  text-align: right;
+}
+
+
+// Padding
+.no-pad-left {
+  padding-left: 0;
+}
+.no-pad-right {
+  padding-right: 0;
+}
+.no-pad-top {
+  padding-top: 0;
+}
+.no-pad-bottom {
+  padding-bottom: 0;
+}

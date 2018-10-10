@@ -1,0 +1,12 @@
+<div [ngSwitch]="el.type">
+  <sf2-text-input *ngSwitchCase="'text'" [elementData]="elementData"></sf2-text-input>
+  <sf2-password *ngSwitchCase="'password'" [elementData]="elementData"></sf2-password>
+  <sf2-currency *ngSwitchCase="'currency'" [elementData]="elementData"></sf2-currency>
+  <sf2-date *ngSwitchCase="'date'" [elementData]="elementData"></sf2-date>
+  <sf2-select *ngSwitchCase="'select'" [elementData]="elementData"></sf2-select>
+  <sf2-radio-group *ngSwitchCase="'radio'" [elementData]="elementData"></sf2-radio-group>
+  <sf2-multiple-object-select *ngSwitchCase="'array'" [elementData]="elementData"></sf2-multiple-object-select>
+  <sf2-single-object-select *ngSwitchCase="'single_join'" [elementData]="elementData"></sf2-single-object-select>
+  <sf2-number *ngSwitchCase="'number'" [elementData]="elementData"></sf2-number>
+  <sf2-check-box-group *ngSwitchCase="'checkbox'" [elementData]="elementData"></sf2-check-box-group>
+</div>

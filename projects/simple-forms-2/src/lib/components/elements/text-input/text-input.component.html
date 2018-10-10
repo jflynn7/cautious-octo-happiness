@@ -1,0 +1,28 @@
+<!-- Wrapper -->
+<div class="{{ style('wrapper') || 'wrapper' }}" [formGroup]="formGroup">
+
+  <!-- Label -->
+  <label
+    #label
+    [id]="aXe('label-id')"
+    class="{{ style('label')}}"
+    [ngClass]="getLabelClass()"
+    [for]="el.inputId">
+    {{el.label}}
+  </label>
+
+  <!-- Input -->
+  <input
+    #input
+    attr.aria-label="{{aXe('aria-label')}}"
+    attr.aria-labelled-by="{{aXe('aria-labelled-by')}}"
+    [id]="el.inputId"
+    class="{{ style('input')}}"
+    [ngClass]="getInputStyle()"
+    type="text"
+    (focus)="toggleFocus()"
+    (blur)="toggleFocus()"
+    formControlName="{{el.inputId}}">
+</div>
+
+

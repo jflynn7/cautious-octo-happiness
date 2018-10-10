@@ -120,6 +120,186 @@
           }
         }
       }
+    },
+    "SimpleForms": {
+      "root": "projects/simple-forms",
+      "sourceRoot": "projects/simple-forms/src",
+      "projectType": "library",
+      "prefix": "sf2",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/simple-forms/tsconfig.lib.json",
+            "project": "projects/simple-forms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/simple-forms/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/simple-forms/src/test.ts",
+            "tsConfig": "projects/simple-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/simple-forms/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/simple-forms/tsconfig.lib.json",
+              "projects/simple-forms/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "AdminDashboard": {
+      "root": "projects/admin-dashboard",
+      "sourceRoot": "projects/admin-dashboard/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/admin-dashboard/tsconfig.lib.json",
+            "project": "projects/admin-dashboard/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/admin-dashboard/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/admin-dashboard/src/test.ts",
+            "tsConfig": "projects/admin-dashboard/tsconfig.spec.json",
+            "karmaConfig": "projects/admin-dashboard/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/admin-dashboard/tsconfig.lib.json",
+              "projects/admin-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "NunicornUtils": {
+      "root": "projects/nunicorn-utils",
+      "sourceRoot": "projects/nunicorn-utils/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/nunicorn-utils/tsconfig.lib.json",
+            "project": "projects/nunicorn-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/nunicorn-utils/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nunicorn-utils/src/test.ts",
+            "tsConfig": "projects/nunicorn-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/nunicorn-utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nunicorn-utils/tsconfig.lib.json",
+              "projects/nunicorn-utils/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "NunicornComponents": {
+      "root": "projects/nunicorn-components",
+      "sourceRoot": "projects/nunicorn-components/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/nunicorn-components/tsconfig.lib.json",
+            "project": "projects/nunicorn-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/nunicorn-components/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nunicorn-components/src/test.ts",
+            "tsConfig": "projects/nunicorn-components/tsconfig.spec.json",
+            "karmaConfig": "projects/nunicorn-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nunicorn-components/tsconfig.lib.json",
+              "projects/nunicorn-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "LibraryPlayground"
